@@ -1,2 +1,3 @@
 name: Oneway
 markdown: krandom
+permalink: /blog/:year/:month/:day/:title
