@@ -1,7 +1,63 @@
----
-layout: default
-title: W, Day by Day
----
-	<h1>Hi there, I'm Oneway!</h1>
-	<p>I'm a person who keeps dreaming and holds dreams as a child. I love physics, mathematics, nature, literature, travel and my garden. <a href="/about">Learn more about my life...</a></p>
-	<p>hello world!</p>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Keep programming</title>
+		<link rel="stylesheet" href="./css/main.css">
+		<script type="text/javascript">
+			name = "Nanfeng";
+			document.getElementById("author").innerHTML = "Author: " + name;
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<header>
+				<h1>How to think and how to use</h1>
+				<p id="author"></p>
+				<p id="date"></p>
+				<script type="text/javascript">
+					name = "Nanfeng";
+					document.getElementById("author").innerHTML = "Author: " + name;
+
+					n =  new Date();
+					y = n.getFullYear();
+					m = n.getMonth() + 1;
+					d = n.getDate();
+					hour = n.getHours();
+					minute= (n.getMinutes()<10?'0':'') + n.getMinutes();
+					second = (n.getSeconds()<10?'0':'') + n.getSeconds();
+					document.getElementById("date").innerHTML = m + "/" + d + "/" + y + "  "
+					 + hour + ":" + minute + ":" + second;
+				</script>
+			</header>
+			<hr>
+			<hr>
+		</div>
+
+
+
+		<div class="linux">
+			<h3>Linux:</h3>
+			<div class="linux">
+				<ul>
+					<li><a href="./linux/command_line.html">command line</a></li>
+					<li><a href="./linux/shell.html">Shell</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+
+		<div class="cpp">
+			<h3>C++:</h3>
+		</div>
+
+    
+    <footer>
+    <ul>
+      <li><a href="mailto:tianwainanfeng@gmail.com">email</a></li>
+      <li><a href="https://github.com/tianwainanfeng">github.com/tianwainanfeng</a></li>
+    </ul>
+  </footer>
+	</body>
+</html>

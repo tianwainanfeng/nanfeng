@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Command lines</title>
+    <link rel="stylesheet" href="../css/main.css">
+  </head>
+  <body>
+    <div class="header">
+      <header>
+        <h1>Linux: Command Line</h1>
+        <nav>
+          <span class="navigation"><a href="../index.html">Main</a></span>
+          <span class="navigation"><a href="./shell.html">Shell</a></span>
+        </nav>
+      </header>
+      <hr>
+      <hr>
+    </div>
+
+    <div class="main">
+      <div class="main">
+        <h3>Help commands:</h3>
+        <ul>
+          <li>man</li>
+          <ul>
+            <li>manual pages for help</li>
+            <li>example: <code>man man</code></li>
+          </ul>
+          <li>whereis</li>
+          <li>whatis</li>
+          <li>locate</li>
+        </ul>
+      </div>
+
+      <div class="main">
+        <h3>List commands:</h3>
+        <ul>
+          <li>ls</li>
+          <ul>
+            <li><code>ls -m</code> : list files as a single line, with comma separations</li>
+            <li><code>ls -x</code> : list files and sort horizontally</li>
+            <li><code>ls -F</code> : list files and show directories with "/" character appended to filename</li>
+            <li><code>ls -R</code> : list all files and recursively descends directories</li>
+            <li><code>ls -dR /*/*/*</code> : show a certain number of directory level</li>
+            <li><code>li -l</code> : list in a long format</li>
+          </ul>
+          <li>dir</li>
+          <ul>
+            <li>list directories</li>
+          </ul>
+          <li>vdir</li>
+          <ul>
+            <li>same as <code>ls -l</code></li>
+          </ul>
+        </ul>
+      </div>
+
+      <div class="main">
+        <h3>Read commands:</h3>
+        <ul>
+          <li>cat</li>
+          <ul>
+            <li><code>cat -n</code> : output with line number</li>
+          </ul>
+          <li>more</li>
+          <ul>
+            <li>type "h" for help</li>
+            <li>type "q" for quit</li>
+          </ul>
+          <li>less</li>
+          <ul>
+            <li>refer <code>more</code></li>
+          </ul>
+          <li>head</li>
+          <ul>
+            <li><code>head -n</code> : show n lines</li>
+          </ul>
+          <li>tail</li>
+          <ul>
+            <li>refer <code>head</code></li>
+          </ul>
+        </ul>
+      </div>
+
+      <div class="main">
+        <h3>Create commands:</h3>
+        <ul>
+          <li>touch</li>
+          <ul>
+            <li><code>touch newfile.txt</code> : create a new file; if the file exists, it will update the file's date or time.</li>
+            <li><code>touch -t 1000110022 myfile.txt</code> : set the time for the file</li>
+          </ul>
+          <li>mkdir</li>
+          <ul>
+            <li><code>mkdir -p temp/parent/child</code> : build a heirarchy of directories</li>
+          </ul>
+          <li>ln</li>
+          <ul>
+            <li><code>ln</code> : create hard link</li>
+            <li><code>ln -s</code> : create symbolic link; a symbolic link is merely a pathname or alias to the original file</li>
+            <li><code>ln file1 file2</code> : file2 will be the same as file1. Removing file1, file2 wil remain. Changing file1, the changes will apprear in file2</li>
+          </ul>
+          <li>mc</li>
+          <ul>
+            <li><code>mc</code> : Midnight Commander, a graphical interface for handing files, a visual shell</li>
+          </ul>
+        </ul>
+      </div>
+
+      <div class="main">
+        <h3>Remove commands:</h3>
+        <ul>
+          <li>rm</li>
+          <ul>
+            <li><code>rm -rf</code> : force to remove recursively</li>
+            <li><code>rm -i</code> : use the interactive option to check if you want to delete the file</li>
+          </ul>
+          <li>rmdir</li>
+          <ul>
+            <li><code>rmdir folder</code> : remove a folder but the folder should be empty first</li>
+          </ul>
+        </ul>
+      </div>
+
+      <div class="main">
+        <h3>Moving command</h3>
+        <ul>
+          <li>mv</li>
+          <ul>
+            <li><code>mv a.txt b.txt</code> : rename the filename</li>
+            <li><code>mv -b file1 file2</code> : if file2 exists, create a backup of file2 with a default extention of (~)</li>
+            <li><code>mv -i</code> : interactive mode</li>
+          </ul>
+          <li>cp</li>
+          <ul>
+            <li><code>cp i</code> : interactive mode</li>
+            <li><code>cp -r</code> : copy recrusively</li>
+            <li><code>cp -P</code> : copy with the directory structure. One may use <code>tree</code> to check the structure</li>
+          </ul>
+        </ul>
+      </div>
+
+      <div class="main">
+        <h3>Searching commands:</h3>
+        <ul>
+          <li>Regular expressions</li>
+          <ul>
+            <li><code>*</code> : matches any character</li>
+            <li><code>? or .</code> : matches a single character</li>
+            <li><code>[xxx] or [x-x]</code> : matches a character in a range of characters</li>
+            <li><code>\x</code> : matches a character such as ? or \</li>
+            <li><code>^pattern</code> : matches pattern to the beginning of a line</li>
+            <li><code>$pattern</code> : matches pattern to the end of a line</li>
+          </ul>
+          <li>grep</li>
+          <ul>
+            <li><code>grep ^[0-9]</code> : find all lines that begin with a number</li>
+            <li><code>grep "(b)"</code> : search for pattern of the letter b in parentheses</li>
+            <li><code>grep -n</code> : display the line number</li>
+            <li><code>grep -nf myword.txt otherfile.txt</code>: myword.txt contains all the words that we want to search, which are saved in a file</li>
+            <li><code>grep -F</code> : same as <code>fgrep</code></li>
+            <li><code>grep -E</code> : same as <code>egrep</code></li>
+          </ul>
+          <li>egrep</li>
+          <ul>
+            <li><code>egrep ^[0-9]</code> : same as <code>grep ^[0-9]</code></li>
+            <li><code>egrep "\([b]\)"</code> : search for pattern of the letter b in parentheses, same as <code>grep "(b)"</code></li>
+            <li><code>egrep -n</code> : show line number</li>
+          </ul>
+          <li>fgrep</li>
+          <ul>
+            <li><code>fgrep</code> : find fixed string</li>
+          </ul>
+        </ul>
+      </div>
+
+      <div class="main">
+        <h3>Compressing and uncompressing commands:</h3>
+        <ul>
+          <li>tar</li>
+          <ul>
+            <li><code>tar</code> : tape archive program</li>
+            <li><code>tar -c mydir > mydir.tar</code> : create a tar archive; mydir will be still there</li>
+            <li><code>tar -cv mydir > mydir.tar</code> : create a tar archive; mydir will be removed; also, what directories and files are being added will be shown.</li>
+            <li><code>tar -cv mydir > mydir.tar</code> : have tar ask if you want to add each file</li>
+            <li><code>tar tf mydir.tar</code> :  <code>-t</code> to list an archive's contents; <code>-f> to specify a tar archive to use</li>
+            <li><code>tar -xvf mydir.tar</code> : to extract everything</li>
+            <li><code>tar -xvwf mydir.tar</code> : to extract selected files</li>
+            <li><code>tar -xf mydir.tar mydir/test.txt</code> : to extract a single file; <b><code>tar</code> will overide files with the same name</b></li>
+          </ul>
+          <li>cpio</li>
+          <ul>
+            <li><code>cpio</code> : copy files in and out of tar or <code>cpio</code> archives</li>
+          </ul>
+          <li>gzip</li>
+          <ul>
+            <li><code>gzip</code> : compress files; save disk space; combine with <code>tar</code> to deal with <code>.\tgz</code> or <code>.tar.gz</code> format</li>
+            <li><code>gzip mydir.tar</code> : compress a file or an archive; append a <code>.gz</code> extension; delete the original file</li>
+            <li><code>gzip -d or gunzip mydir.tar.gz</code> : uncompress file; file should have a <code>.gz (.Z, -gz, .z, -z, or _z)</code> extension</li>
+            <li><code>gzip -S</code> : specify your own extension</li>
+          </ul>
+          <li>compress</li>
+          <ul>
+            <li><code>compress file</code> : compress a file; add a .Z extension.</li>
+            <li><code>uncompress file.Z</code>: inverse of <code>compress file</code></li>
+          </ul>
+        </ul>
+      </div>
+
+      <div class="main">
+        <h3>System administration commands:</h3>
+        <ul>
+          <li>su</li>
+          <ul>
+            <li><code>su</code> : superuser command, run a command as any user on the system</li>
+            <li><code>whoami</code> : check user</li>
+          </ul>
+          <li>df</li>
+          <ul>
+            <li><code></code> : free disk space command, gather and summarize the statistics about all current mounted filesystems</li>
+          </ul>
+          <li>du</li>
+          <ul>
+            <li><code>du</code> : disk usage command, summarize how disk is being used</li>
+          </ul>
+          <li>free</li>
+          <ul>
+            <li><code>free</code> : show breakdowns fo the amounts and totals of free and used memory, including the swapfile usage</li>
+          </ul>
+          <li>vmstat</li>
+          <ul>
+            <li><code>vmstat</code> : a general=purpose monitoring program, offer real-time display of memoery usage, virtual memory statistics, disk activity, system usage, and CPU activity</li>
+          </ul>
+          <li>top</li>
+          <ul>
+            <li><code>top</code> : a system monitor that displays statistical information about how Linux is currently handling the memory, swap file and processes</li>
+          </ul>
+          <li>uptime</li>
+          <ul>
+            <li><code>uptime</code> : show how long Linux has been running, how many users are on, and three system load average</li>
+          </ul>
+          <li>w</li>
+          <ul>
+            <li><code>w</code> : show uptime information and that for each user</li>
+          </ul>
+          <li>adduser</li>
+          <ul>
+            <li><code>adduser www</code>: add a user www</li>
+          </ul>
+          <li>passwd</li>
+          <ul>
+            <li><code>passwd www</code> : set password for user www</li>
+          </ul>
+          <li>chfn</li>
+          <ul>
+            <li><code>chfn www</code> : change finger information of user www; use <code>finger</code> to check the finger information</li>
+          </ul>
+        </ul>
+      </div>
+
+      <div class="">
+        <h3>Ownership and Permission commands:</h3>
+        <ul>
+          <li>file types</li>
+          <ul>
+            <li><code>b</code> : block device</li>
+            <li><code>c</code> : character device</li>
+            <li><code>d</code> : directory</li>
+            <li><code>b</code> : symbolic link</li>
+          </ul>
+          <li>permission flags</li>
+          <ul>
+            <li><code>r</code> : read</li>
+            <li><code>w</code> : write</li>
+            <li><code>r</code> : execute (search for a directory)</li>
+          </ul>
+          <li>groups</li>
+          <ul>
+            <li>owner: first three characters</li>
+            <li>group: the next three characters after owner (use <code>groups</code> to list groups)</li>
+            <li>others: the last three characters after group</li>
+          </ul>
+          <li>chmod</li>
+          <ul>
+            <li><code>chmod</code> : change file or directory permissions; it uses octal, or base eight, notation in modifying file or directory permissions. The 4-2-1 sequence corresponds to the three rwx sequences in the permissions flags. <code>chmod</code> also has a command-line form: <code>ugoa +-= rwxXstugo</code></li>
+            <li><code>chmod 600 file</code> : only owner can read(4) and write(2). Here 4+2=6</li>
+            <li><code>chmod 664 file</code> : only owner and group can read(4) and write(2). Here 4+2=6. Others can read(4) only.</li>
+            <li><code>chmod 700 mydir</code> : only owner can read(4) and write(2) and access(1) to mydir. Here 4+2+1=7</li>
+            <li><code>chmod go-rwx file</code> : remove the read-, write-, and execute- permissions of group and others for file</li>
+            <li><code>chmod o+x mydir</code> : give others permission to access mydir</li>
+          </ul>
+          <li>chown</li>
+          <ul>
+            <li><code>chown</code> : change ownership command</li>
+            <li><code>chown user:group file</code> : give user in group the access to file; if user is omitted, all users in group will have access</li>
+          </ul>
+          <li>chgrp</li>
+          <ul>
+            <li><code>chgrp</code> : change group command; change group ownerships using group name or group id (GID)</li>
+          </ul>
+          <li>newgrp</li>
+          <ul>
+            <li><code>newgrp</code> : shift the current group membership</li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+
+    <p>See also <a href="./shell.html">Shell</a>.</p>
+
+    <footer>
+    <ul>
+      <li><a href="mailto:tianwainanfeng@gmail.com">email</a></li>
+      <li><a href="https://github.com/tianwainanfeng">github.com/tianwainanfeng</a></li>
+    </ul>
+    </footer>
+
+  </body>
+</html>

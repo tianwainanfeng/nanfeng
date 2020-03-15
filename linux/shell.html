@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Shell</title>
+    <link rel="stylesheet" href="../css/main.css">
+  </head>
+  <body>
+    <div class="header">
+      <header>
+        <h1>Linux: Shell</h1>
+        <nav>
+          <span class="navigation"><a href="../index.html">Main</a></span>
+          <span class="navigation"><a href="./command_line.html">Command line</a></span>
+        </nav>
+      </header>
+      <hr>
+      <hr>
+    </div>
+
+    <div class="main">
+      <p>Shell is just another Linux program that provides the interface to Linux so you can run programs.</p>
+
+      <div class="main">
+        <h3>ash shell</h3>
+        <p>ash shell, by Kenneth Almquist, is one of the smallest shells available for Linux. It supports most of the command shell commands.</p>
+
+        <h3>bash shell</h3>
+        <p>bash shell, or Bourne Again SHell, by Brian Fox and Chet Ramey, is the default Linux shell. It works just like the sh shell.</p>
+
+        <h3>ksh shell</h3>
+        <p>pdksh, or public-domain Korn shell, originally by Eric Gisin, supports job control.</p>
+
+        <h3>tcsh shell</h3>
+        <p>tcsh shell, by William Joy and others, emulates the csh shell, but has more features, i.e., a command-line editor with spelling correction.</p>
+
+        <h3>zsh shell</h3>
+        <p>zsh shell, originally by Paul Falstad, has more than 50 different command-line options and emulates the sh and ksh shell commands.</p>
+      </div>
+
+      <hr>
+
+      <div class="main">
+        <h3>Shell Command Line</h3>
+        <ul>
+          <li><code>></code> : greater-than (>) character, a standard output redirection operator; the standard output has an assigned file number of one(1).</li>
+          <li><code><</code> : less-than (<) character, a standard input redirection operator; the standard input has an assigned file number of zero(0).</li>
+          <li><code>cpio -o < file1.txt >file1.cpio 2>cpio.errors</code> : the standar error has an assigned file number of two(2)</li>
+          <<li><<code>>></code> : concatenate (>>), append redirection operator</li>
+          <li><code><<</code> : end of the input immediately follows the << operator</li>
+        </ul>
+
+        <h3>Customizing Shell</h3>
+        <ul>
+          <li><code>printenv</code> : list the environment variables</li>
+          <li>add customized items into <code>~/.bash_profile</code></li>
+        </ul>
+      </div>
+
+      <h3>Running Programs in the Background</h3>
+      <ul>
+        <li><code>&</code> :  ampersand operator, for example, <code>ls &</code></li>
+        <li><code>ps</code> : process number, process status command</li>
+        <li><code>kill process_number</code> : stop the program with its process number</li>
+        <li><code>Ctrl + z</code> : put a running program into the background and suspend its operation</li>
+        <li><code>fg</code> : bring the running program back to current display</li>
+        <li><code>bg<code> : continue to allow the program to run in background</li>
+        <li><code>jobs</code> : list the suspended programs</li>
+        <li><code>fg %1 or fg %programName</code> : each job has a job number which can be refered, bring the first suspend program, for example.</li>
+        <li><code>kill %jobNumber or kill %programName</code> : similar to <code>fg %1 or fg %programName</code></li>
+      </ul>
+
+      <h3>Building Shell Commands</h3>
+      <ul>
+        <li><code>chmod +x filescript</code> : turn the command lines into an executable file/script</li>
+      </ul>
+
+    </div>
+
+    <p>See also <a href="./command_line.html">Command Line</a>.</p>
+
+    <footer>
+    <ul>
+      <li><a href="mailto:tianwainanfeng@gmail.com">email</a></li>
+      <li><a href="https://github.com/tianwainanfeng">github.com/tianwainanfeng</a></li>
+    </ul>
+    </footer>
+
+  </body>
+</html>
