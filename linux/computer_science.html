@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Shell</title>
+    <link rel="stylesheet" href="../css/main.css">
+  </head>
+  <body>
+    <div class="header">
+      <header>
+        <h1>Computer Science</h1>
+        <nav>
+          <span class="navigation"><a href="../index.html">Main</a></span>
+          <!--span class="navigation"><a href="./command_line.html">Command line</a></span-->
+        </nav>
+      </header>
+      <hr>
+      <hr>
+    </div>
+
+    <div class="main">
+      <h3>Data storage</h3>
+      <ul>
+        <li><b>bits</b>: short for binary digits, 0s and 1s, that are for encoded information.</li>
+        <li><b>flip-flop</b>: a collection of circuits built by AND, OR, XOR and NOT gates.</li>
+        <li><b>main memory</b>: a large collection of circuits that store the bits.</li>
+        <li><b>cell</b>: a manageable unit that a computer's main memory is organized, e.g, a cell size of 8 bits. A string of 8 bits is called a <b>byte</b>.</li>
+        <li><b>address</b>: a unique "name" that can be used to identify individual cells in a computer's main memory.</li>
+        <li><b>Random Access Memory (RAM)</b>: main memory, since it is organized as individual, addressable cells that can be accessed independently.</li>
+        <li><b>dynamic memory</b>: dynamic RAM that uses modern techniques to decrease the response time.</li>
+        <li><b>mass storage</b>: secondary storage system, additional memory devices to main memory.</li>
+        <li><b>ASCII</b>: American Standard Code for Information Interchange, use bit patterns of length seven to represent the letter, punctuation symbols, digit number and certain control information; it is extended to an 8 bits to fit conveniently into a typical byte-size memory cell and provide 128 additional bit patterns.</li>
+        <li><b>Unicode</b>: extention of ASCII by International Organization for Standardization (ISO) of 16 bits to allow text written in other language, such as Chinese and Japanese to be represented.</li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <h3>Data manipulation</h3>
+      <ul>
+        <li><b>Central Processing Unit (CPU)</b>: processor, circuitry in a computer that controls the manipulation of data. A CPU consistis of three parts: <b>arithmetic/logic unit</b> (perform operations), <b>control unit</b> (coordinates the machine's activities), and <b>registers</b> (temporaray storage).</li>
+        <li><b>pipelining</b>: technique of allowoing teh steps in the machine cycle to overlap, it can increase the execution speed. While one instruction is being fexecuted, the net instruction can be fetched. More than one instruction are in "the pipe" at one time.</li>
+        <li><b>Multi-Core CPU</b>: more than one CPUs residing on the same chip along with shared cache memory.</li>
+        <li><b>parallel processing</b>: perform several activities at the same time; pipelining can be viewed as a first step.</li>
+        <li><b>batch processing</b>: execution of jobs by collecting them in a single batch, then executing them withouth further interaction with the user. Jobs are executed </li>
+        <li><b>user interface</b>: portion of an operating system that handles communication with users, such as <b>shell</b> and <b>graphical user interface (GUI)</b>.</li>
+        <li><b>operating system</b>: collection of software that contrals the overall operation of a computer. It consists of software from application and system.</li>
+        <li><b>kernel</b>: internal part of an operating system, contains software that perform the very basic functions required by installation.</li>
+        <li><b>process</b>: execution of a program under the control of the operating system.</li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <h3>Network and Internet</h3>
+      <ul>
+        <li><b>LAN</b>:  local area network</li>
+        <li><b>MAN</b>:  metropolitan area network</li>
+        <li><b>WAN</b>: wide area network</li>
+        <li><b>protocol</b>: rules that a network to function reliably.</li>
+        <li><b>Ethernet</b>: a set of standards for implementing a LAN with a bus topology.</li>
+        <li><b>internet</b>: a network of networks.</li>
+        <li><b>router</b>: connection between networks to form an internet.</li>
+        <li><b>distributed system</b>: consist of software units that execute as processes on different computers.</li>
+        <li><b>cluster computing</b>: a distributed system in which many independent computers work closely together to provide computation or services comparable to a much larger computer.</li>
+        <li><b>grid computing</b>: distributed systems that are more loosely coupled than clusters but that still work together to accomplish large tasks.</li>
+        <li><b>cloud computing</b>: distributed systems that huge pools of shared computers on the network can be allocated for use.</li>
+        <li><b>Internet</b>: most notable internet, a worldwide combination of LANs, MANs, and WANs.</li>
+        <li><b>ISP</b>: Internet Service Providers</li>
+        <li><b>IP address</b>: Internet Protocol address, a unique identifying address for each computer in an internet-wide addressing system.</li>
+        <li><b>domain</b>: a "region" of the Internet operated by a single authority. After registrars, a unique domain name will be assigned.</li>
+        <li><b>domain name system (DNS)</b>: system that perform the conversion of mnemonic domanin addresses to IP addresses.</li>
+        <li><b>File Transfer Protocol (FTP)</b>: a client/server protocol for transferring files across the Internet.</li>
+        <li><b>Hypertext Transfer Protocol (HTTP)</b>: a protocol that is used for transferring the hypertext documents between browsers ad web servers.</li>
+        <li><b>Uniform Resource Locator (URL)</b>: a unique address for each document in order to locate and retrieve.</li>
+        <li><b>Hypertext Markup Language (HTML)</b>: system of tags which are special symbols that describe how the document should appear on a display screen.</li>
+        <li><b>eXtensible Markup Language (XML)</b>: a standardized style for designing notational systems for representing data as text files.</li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <h3>Data Abstractions</h3>
+      <ul>
+        <li><b>homogeneious array</b>: a "rectangular" block of data whose entries are of same type.</li>
+        <li><b>heterogeneious array</b>: a block of data whose entries might be of different types.</li>
+        <li><b>list</b>: a collection whose entries are arranged sequentially. The beginning is called the <i>head</i> and the end is called the <i>tail</i>.</li>
+        <li><b>stack</b>: a list in which entries are inserted and removed only at the head. The head of a stack is called "top" and its end is called "base" or "bottom". Removing an entry from the top is called "popping an entry". This is a "last-in, first-out" structure.</li>
+        <li><b>queue</b> a list in which the entries are removed only at the head and new entries are inserted only at the tail. This is a "first-in, first-out" structure.</li>
+        <li><b>tree</b>: a collection whose entries have a hierarchicalorganization.</li>
+        <li><b>pointer</b>: a storage area that contains the encoded address.</li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <h3>Database</h3>
+      <ul>
+        <li><b>schema</b>: a description of the entire database structure that is used by the database software to maintain the database.</li>
+        <li><b>Database management system (DBMS)</b>: this is separated from the application software.</li>
+        <li><b>database model</b>: conceptual view of the database, e.g, ralational database model and the object-oriented database model.</li>
+        <li><b>relation</b>: descprition of data as being stored in rectangular tables. A row in a relation is called <b>tuple</b>. Columns in a relateion are <b>attributes</b>.</li>
+        <li><b>SQL</b>: Structured Query Language, forms the backbone of most relational database query systems.</li>
+      </ul>
+
+    </div>
+
+    <div class="main">
+      <h3>Reference</h3>
+      <ol>
+        <li>Computer Science: An Overview, J. G. Brookshear</li>
+      </ol>
+
+    </div>
+
+
+    <footer>
+    <ul>
+      <li><a href="mailto:tianwainanfeng@gmail.com">email</a></li>
+      <li><a href="https://github.com/tianwainanfeng">github.com/tianwainanfeng</a></li>
+    </ul>
+    </footer>
+
+  </body>
+</html>
